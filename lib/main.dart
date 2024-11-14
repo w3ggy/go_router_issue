@@ -96,7 +96,7 @@ final routerConfig = GoRouter(
       routes: [
         StatefulShellRoute.indexedStack(
           builder: (_, state, navigationShell) {
-            return TabsPage(navigationShell: navigationShell, tabsCount: 3);
+            return AnotherTabsPage(navigationShell: navigationShell, tabsCount: 3);
           },
           branches: <StatefulShellBranch>[
             StatefulShellBranch(

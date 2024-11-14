@@ -20,6 +20,25 @@ class TabsPage extends StatelessWidget {
   }
 }
 
+class AnotherTabsPage extends StatelessWidget {
+  const AnotherTabsPage({
+    required this.navigationShell,
+    required this.tabsCount,
+    super.key,
+  });
+
+  final StatefulNavigationShell navigationShell;
+  final int tabsCount;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: navigationShell,
+      bottomNavigationBar: N1BottomNavigationBar(navigationShell, tabsCount),
+    );
+  }
+}
+
 class N1BottomNavigationBar extends StatefulWidget {
   const N1BottomNavigationBar(
     this.navigationShell,
